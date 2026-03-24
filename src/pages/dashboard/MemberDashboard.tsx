@@ -6,7 +6,7 @@ import DashboardLayout from "../../layouts/DashboardLayout";
 export default function MemberDashboard() {
 
   const token = localStorage.getItem("access_token");
-  const user_role = localStorage.getItem("user_role");
+  const user_role = localStorage.getItem("user_role") || "";
   
   if (!token) {
     return <Navigate to="/login" />;

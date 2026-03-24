@@ -21,6 +21,7 @@ export default function PaymentFormModal({ userId, onSuccess }: any) {
   const loadCategorie = async (pageNumber  = 1) => {
     const data = await fetchCategorie(pageNumber);
     setCategories(data.results);
+    setPage(1);
   };
 
    // Fetch user si edition

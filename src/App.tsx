@@ -5,7 +5,6 @@ import UserForm from "./pages/users/UserForm";
 import Login from "./pages/users/Login";
 import './App.css'
 import PrivateRoute from "./components/PrivateRoute";
-import PaymentForm from "./pages/payments/PaymentForm";
 import PaymentList from "./pages/payments/PaymentList";
 import PaymentEdit from "./pages/payments/PaymentEdit"
 import MembersInDebt from "./pages/members/MembersInDebt";
@@ -16,6 +15,7 @@ import CategoryForm from "./pages/cotisation/CategoryForm";
 import CategoryList from "./pages/cotisation/CategoryList";
 import Home from "./pages/Home";
 import MemberPaymentList from "./pages/payments/MemberPaymentList";
+
 
 function App() {
  return (
@@ -30,7 +30,7 @@ function App() {
           path="/users"
           element={
             <PrivateRoute>
-               <UsersList  role={String} children={undefined} />
+               <UsersList/>
             </PrivateRoute>
           }
         />
@@ -39,7 +39,7 @@ function App() {
           path="/users/new"
           element={
             <PrivateRoute>
-              <UserForm  role={String} children={undefined} />
+              <UserForm />
             </PrivateRoute>
           }
         />
@@ -47,7 +47,7 @@ function App() {
           path="/users/:id/edit"
           element={
             <PrivateRoute>
-              <UserForm  role={String} children={undefined} />
+              <UserForm/>
             </PrivateRoute>
           }
         />
@@ -56,7 +56,7 @@ function App() {
           path="/category"
           element={
             <PrivateRoute>
-              <CategoryList role={String} children={undefined} />
+              <CategoryList  />
             </PrivateRoute>
           }
         />
@@ -88,13 +88,13 @@ function App() {
 
       <Route path="/members/:id/payment" element={
         <PrivateRoute>
-          <MemberPaymentList role={String} children={undefined} />
+          <MemberPaymentList />
         </PrivateRoute>
       } />
 
       <Route path="/payment/:id/edit" element={
         <PrivateRoute>
-          <PaymentEdit role={String} children={undefined} />
+          <PaymentEdit />
         </PrivateRoute>
         } />
 
@@ -107,7 +107,7 @@ function App() {
 
       <Route path="/dashboard/admin" element={
         <PrivateRoute>
-          <AdminDashboard role={String} children={undefined} />
+          <AdminDashboard />
         </PrivateRoute>
       } />
       
@@ -119,7 +119,7 @@ function App() {
       
       <Route path="/dashboard/member" element={
         <PrivateRoute>
-          <MemberDashboard role={String} children={undefined} />
+          <MemberDashboard  />
         </PrivateRoute>
       } />
 

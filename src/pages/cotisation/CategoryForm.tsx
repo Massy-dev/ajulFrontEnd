@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import { useNavigate,useParams } from "react-router-dom";
 import api from "../../api/axios";
 import DashboardLayout from "../../layouts/DashboardLayout";
-import { fetchCategorie } from "../../services/authService";
-
 
 
 

@@ -15,9 +15,6 @@ type Category = {
   name: string;
 }
 
-type PaiementForm = {
-
-}
 
 export default function PaymentForm() {
   const { id } = useParams<Params>();
@@ -34,6 +31,7 @@ export default function PaymentForm() {
   const loadCategorie = async (pageNumber  = 1) => {
     const data = await fetchCategorie(pageNumber);
     setCategories(data.results);
+    setPage(1);
   };
 
    // Fetch user si edition
