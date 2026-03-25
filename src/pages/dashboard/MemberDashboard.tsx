@@ -16,7 +16,7 @@ export default function MemberDashboard() {
   const [payments, setPayments] = useState<any[]>([]);
 
   const loadData = async () => {
-    const p = await api.get("/users/me/");
+    const p = await api.get("/users/user_me/");
    
     setProfile(p.data);
 
