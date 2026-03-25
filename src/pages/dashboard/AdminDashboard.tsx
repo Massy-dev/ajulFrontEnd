@@ -53,6 +53,10 @@ export default function AdminDashboard() {
 
   return (
     <DashboardLayout role={user_role || ""} username={user.username}>
+       {loading ? (
+    <div className="text-center py-10">Chargement...</div>
+  ) : (
+    <>
       <h2 className="text-2xl font-bold mb-6">
         Tableau de bord
       </h2>
@@ -133,7 +137,8 @@ export default function AdminDashboard() {
 
         </div>
       </div>
-      
+      </>
+    )}
     </DashboardLayout>
   );
 }
