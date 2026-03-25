@@ -4,7 +4,6 @@ import {
   Users,
   CreditCard,
   Wallet,
-  User,
   Menu,
   X,
 } from "lucide-react";
@@ -60,22 +59,24 @@ export default function Sidebar({ role }: Props) {
 
         <nav className="flex flex-col gap-2">
 
-          <NavLink to="/dashboard/admin" className=
-          {({ isActive }) =>
-            `flex items-center gap-2 px-4 py-2 rounded-lg transition ${
-              isActive
-                ? "bg-white text-sky-950 font-bold"
-                : "text-white hover:bg-gray-100 hover:text-sky-950"
-            }`
-          }
-          >
-            <LayoutDashboard size={18} />
-            Dashboard
-          </NavLink>
+         
 
           {/* ADMIN */}
           {role === "Admin" && (
             <>
+
+              <NavLink to="/dashboard/admin" className=
+                {({ isActive }) =>
+                  `flex items-center gap-2 px-4 py-2 rounded-lg transition ${
+                    isActive
+                      ? "bg-white text-sky-950 font-bold"
+                      : "text-white hover:bg-gray-100 hover:text-sky-950"
+                  }`
+                }
+                >
+                  <LayoutDashboard size={18} />
+                  Dashboard
+                </NavLink>
 
               <NavLink to="/users" className=
               {({ isActive }) =>
@@ -127,7 +128,7 @@ export default function Sidebar({ role }: Props) {
 
           {/* MEMBRE */}
           {role === "Membre" && (
-            <NavLink to="/profile" className={({ isActive }) =>
+            <NavLink to="/dashboard/member" className={({ isActive }) =>
               `flex items-center gap-2 px-4 py-2 rounded-lg transition ${
                 isActive
                   ? "bg-white text-sky-950 font-bold"
@@ -135,8 +136,8 @@ export default function Sidebar({ role }: Props) {
               }`
             }
             >
-              <User size={18} />
-              Mon profil
+              <LayoutDashboard size={18} />
+              Dashboard
             </NavLink>
           )}
         </nav>
