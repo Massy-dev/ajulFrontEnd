@@ -15,6 +15,7 @@ import CategoryForm from "./pages/cotisation/CategoryForm";
 import CategoryList from "./pages/cotisation/CategoryList";
 import Home from "./pages/Home";
 import MemberPaymentList from "./pages/payments/MemberPaymentList";
+import Register from "./pages/users/Register";
 
 
 function App() {
@@ -22,9 +23,9 @@ function App() {
     <BrowserRouter>
       <Routes>
 
-      <Route path="/" element={<Home />} />
-      
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         
         <Route
           path="/users"

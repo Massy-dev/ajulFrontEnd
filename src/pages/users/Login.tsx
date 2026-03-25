@@ -1,5 +1,5 @@
 import { useState, type FormEvent, type ChangeEvent } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import api from "../../api/axios";
 import { fetchCurrentUser } from "../../services/authService";
 
@@ -84,6 +84,18 @@ export default function Login() {
         >
           Se connecter
         </button>
+        <div className="text-center mt-6">
+          <p className="text-gray-500 text-sm">
+            Pas encore de compte ?
+          </p>
+
+          <Link
+            to="/register"
+            className="inline-block mt-2 text-blue-600 font-semibold hover:text-blue-800 transition"
+          >
+            Créer un compte →
+          </Link>
+        </div>
       </form>
     </div>
   );
