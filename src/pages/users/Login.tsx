@@ -85,13 +85,13 @@ export default function Login() {
           Se connecter
         </button>
         <div className="text-center mt-6">
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-400 text-sm">
             Pas encore de compte ?
           </p>
 
           <Link
             to="/register"
-            className="inline-block mt-2 text-blue-600 font-semibold hover:text-blue-800 transition"
+            className="inline-block mt-2 text-black font-semibold hover:text-blue-800 transition"
           >
             Créer un compte →
           </Link>
