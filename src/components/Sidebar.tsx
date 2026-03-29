@@ -12,7 +12,7 @@ import { useState } from "react";
 type Props = {
   role: string;
 };
-import { Analytics } from "@vercel/analytics/next"
+
 export default function Sidebar({ role }: Props) {
   const [open, setOpen] = useState(false);
   
