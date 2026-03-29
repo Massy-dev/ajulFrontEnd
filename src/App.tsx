@@ -13,9 +13,9 @@ import TreasurerDashboard from "./pages/dashboard/TreasurerDashboard";
 import MemberDashboard from "./pages/dashboard/MemberDashboard";
 import CategoryForm from "./pages/cotisation/CategoryForm";
 import CategoryList from "./pages/cotisation/CategoryList";
-import Home from "./pages/Home";
 import MemberPaymentList from "./pages/payments/MemberPaymentList";
 import Register from "./pages/users/Register";
+import Visitor from "./pages/Visitor";
 
 
 function App() {
@@ -23,7 +23,8 @@ function App() {
     <BrowserRouter>
       <Routes>
 
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Visitor />} />
+       
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         
