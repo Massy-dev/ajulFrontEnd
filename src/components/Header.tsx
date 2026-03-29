@@ -1,6 +1,6 @@
 import { LogOut, UserCircle } from "lucide-react";
 import { logout } from "../services/authService";
-
+import { Analytics } from "@vercel/analytics/next"
 type Props = {
   username: string;
   role: string;
@@ -34,6 +34,7 @@ export default function Header({ username, role }: Props) {
           Logout
         </button>
       </div>
+      <Analytics />
     </header>
   );
 }
